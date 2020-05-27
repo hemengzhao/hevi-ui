@@ -2,11 +2,11 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-
+import './style/index.scss';
 // 导入组件库
-import ColorPicker from '../packages/index';
+import HeviButton from '../packages/index';
 // 注册组件库
-Vue.use(ColorPicker);
+Vue.use(HeviButton);
 
 Vue.config.productionTip = false;
 

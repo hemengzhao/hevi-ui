@@ -1,0 +1,27 @@
+@import '../comment.scss';
+
+$namespace: 'hevi';
+$element-separator: '__';
+$modifier-separator: '--';
+$state-prefix: 'is-';
+
+/* BEM class名命名
+ -------------------------- */
+//  !global  此标志可以改变一个局部变量的作用域范围  !global来覆盖全局变量
+@mixin b($block) {
+    $B: $namespace+'-'+$block !global;
+
+    .#{$B} {
+        @content;
+    }
+}
+//  @at-root  使用@at-root内联选择器模式，编译出来的CSS无任何嵌套，让代码更加的简单。
+// .#{}大括号中可以是任何有效的表达式，然后计算并返回这个表达式的值。
+// @content可以理解为样式代码的占位符。 .当使用@include引用混合器的时候，里面所定义的css代码就会插入到@content所在的位置。
+@mixin when($state) {
+    @at-root {
+        &.#{$state-prefix + $state} {
+          @content;
+        }
+      }
+}

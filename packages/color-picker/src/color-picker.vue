@@ -186,7 +186,7 @@ export default {
 
       const gradientColorArr = [];
       // 计算每一步的hex值
-      for (let i = 0; i < step; i++) {
+      for (let i = 0; i < step; i ++) {
         gradientColorArr.push(this.rgbToHex(parseInt(rStep * i + sColor[0]), parseInt(gStep * i + sColor[1]), parseInt(bStep * i + sColor[2])));
       }
       return gradientColorArr;

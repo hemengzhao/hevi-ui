@@ -6,21 +6,25 @@
     </div>
     <router-view />
   </div> -->
-
-  <colorPicker v-model="color" v-on:change="headleChangeColor"></colorPicker>
+  <Home></Home>
+  <!-- <colorPicker v-model="color" v-on:change="headleChangeColor"></colorPicker> -->
 </template>
 <script>
+import Home from './views/Home'
 export default {
-	data () {
-		return {
-			color: '#ff0000'
-		}
-	},
-	methods: {
-		headleChangeColor () {
-			console.log('颜色改变')
-		}
-	}
+  data() {
+    return {
+      color: '#ff0000'
+    }
+  },
+  components: {
+    Home
+  },
+  methods: {
+    headleChangeColor() {
+      console.log('颜色改变')
+    }
+  }
 }
 </script>
 
