@@ -15,7 +15,7 @@ module.exports = {
       'max': 1,
       'maxEOF': 2
     }], //空行最多不能超过2行
-    "semi": [2, "always"], //必须分号结束！
+    "semi": [0, "always"], //必须分号结束！
     "indent": [0, 4], //tab键4个空格
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",

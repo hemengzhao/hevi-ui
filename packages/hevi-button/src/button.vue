@@ -64,6 +64,9 @@ export default {
   computed: {
     buttonSize() {
       return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
+    },
+    buttonDisabled(){
+      return this.disabled || (this.elForm || {}).disabled;
     }
   },
   methods: {

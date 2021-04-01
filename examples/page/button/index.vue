@@ -9,6 +9,10 @@
    <div>
       <hevi-Button plain>朴素按钮</hevi-Button>
       <hevi-Button plain type="primary">主要按钮</hevi-Button>
+      <hevi-Button plain type="success">主要按钮</hevi-Button>
+      <hevi-Button plain type="warning">主要按钮</hevi-Button>
+      <hevi-Button plain type="danger">主要按钮</hevi-Button>
+      <hevi-Button plain type="info">主要按钮</hevi-Button>
    </div>
    <div>
       <hevi-Button round>朴素按钮</hevi-Button>
@@ -18,7 +22,16 @@
       <hevi-Button circle>朴素按钮</hevi-Button>
       <hevi-Button circle type="primary">主要按钮</hevi-Button>
    </div>
-   <hevi-Button  type="primary" :loading="true">加载中</hevi-Button>
+      <hevi-Button  type="primary" :loading="true">加载中</hevi-Button>
+
+       <div>
+        <hevi-Button disabled >朴素按钮</hevi-Button>
+        <hevi-Button disabled type="primary">主要按钮</hevi-Button>
+        <hevi-Button disabled type="success">主要按钮</hevi-Button>
+        <hevi-Button disabled type="warning">主要按钮</hevi-Button>
+        <hevi-Button disabled type="danger">主要按钮</hevi-Button>
+        <hevi-Button disabled type="info">主要按钮</hevi-Button>
+    </div>
   </div>
 </template>
 <script>

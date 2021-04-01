@@ -5,9 +5,10 @@ import store from "./store";
 import './style/index.scss';
 // 导入组件库
 import HeviButton from '../packages/index';
+import heviAnimationWriting from '../packages/index';
 // 注册组件库
 Vue.use(HeviButton);
-
+Vue.use(heviAnimationWriting);
 Vue.config.productionTip = false;
 
 new Vue({

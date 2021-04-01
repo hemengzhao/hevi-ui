@@ -1,10 +1,11 @@
 import heviButton from './hevi-button';
 import colorPicker from './color-picker';
-
+import heviAnimationWriting from './hevi-animation_writing';
 // 存储组件列表
 const components = [
     colorPicker,
-    heviButton
+    heviButton,
+    heviAnimationWriting
 ];
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
@@ -25,5 +26,6 @@ export default {
     install,
     // 以下是具体的组件列表
     colorPicker,
-    heviButton
+    heviButton,
+    heviAnimationWriting
 };

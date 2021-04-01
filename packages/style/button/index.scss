@@ -39,15 +39,52 @@
             outline: none;
         }
     }
+    
+    @include when(disabled){
+        &,
+        &:hover,
+        &:focus {
+            color: $--button-disabled-font-color;
+            cursor: not-allowed;
+            background-image: none;
+            background-color: $--button-disabled-background-color;
+            border-color: $--button-disabled-border-color;
+        }
+        &.hevi-button--text {
+            background-color: transparent;
+        }
+        &.is-plain {
+            &,
+            &:hover,
+            &:focus{
+                background-image: $--color-white;
+                background-color: $--button-disabled-background-color;
+                border-color: $--button-disabled-border-color;
+            }
+        }
+    }
+    
     @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
     @include m(primary) {
         @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
     }
-   
+   @include m(success){
+        @include button-variant($--button-success-font-color, $--button-success-background-color, $--button-success-border-color);
+   }
+   @include m(warning){
+       @include button-variant($--button-warning-font-color, $--button-warning-background-color, $--button-warning-border-color)
+   }
+   @include m(danger){
+        @include button-variant($--button-danger-font-color, $--button-danger-background-color, $--button-danger-border-color)
+    }
+    @include m(info){
+        @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color)
+    }
     @include when(circle) {
         border-radius: 50%;
         padding: $--button-padding-vertical;
     }
+    
     @include when(loading) {
         position: relative;
         pointer-events: none;
